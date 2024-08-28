@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player</title>
+    <link rel="stylesheet" href="./plyr.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        margin: 0 auto;
+        width: 90vw;
+        height: 90vh;
+      }
+      #selector {
+        width: auto;
+        padding: 10px;
+        margin-left: 40px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <!-- https://github.com/sampotts/plyr/tree/master -->
+  <body>
+    <div>
+      <select name="fileSelect" id="selector"></select>
+      <span id="title"></span>
+    </div>
+    <div id="container">
+      <video controls crossorigin playsinline id="player">
+        <!-- Video files -->
+        <source src="" type="video/mp4" sizes="720" id="source" />
+
+        <!-- Caption files -->
+        <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
+      </video>
+    </div>
+  </body>
+  <script src="./plyr.js"></script>
+  <script src="./controler.js"></script>
+</html>
